@@ -24,19 +24,37 @@ let airportsData = [
 // Function to filter airports and update the table
 function filterAirports() {
     let input = document.getElementById("search").value.toLowerCase();
+    
+    // If the input is empty, clear the table and return
+    if (input === "") {
+        document.getElementById("resultsTable").getElementsByTagName('tbody')[0].innerHTML = "";
+        return;
+    }
+
+    // Filter the airports based on the search input
     let filteredAirports = airportsData.filter(airport => {
         return airport.code.toLowerCase().includes(input) || airport.name.toLowerCase().includes(input);
     });
 
-    // Update the table
+    // Update the table with the filtered results
     let tableBody = document.getElementById("resultsTable").getElementsByTagName('tbody')[0];
     tableBody.innerHTML = ""; // Clear existing table rows
 
-    filteredAirports.forEach(airport => {
+    // If there are no results, show an empty table or a "No results" message
+    if (filteredAirports.length === 0) {
         let row = tableBody.insertRow();
-        let locationCell = row.insertCell(0);
-        let descriptionCell = row.insertCell(1);
-        locationCell.textContent = airport.location;
-        descriptionCell.textContent = airport.description;
-    });
+        let cell = row.insertCell(0);
+        cell.colSpan = 2;
+        cell.textContent = "No results found.";
+    } else {
+        // Add filtered airports to the table
+        filteredAirports.forEach(airport => {
+            let row = tableBody.insertRow();
+            let locationCell = row.insertCell(0);
+            let descriptionCell = row.insertCell(1);
+            locationCell.textContent = airport.location;
+            descriptionCell.textContent = airport.description;
+        });
+    }
 }
+
