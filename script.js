@@ -1,11 +1,25 @@
-let airportsData = []; // Will hold airport data from JSON
-
-// Fetch JSON data from a file or API (you can use static or dynamic JSON data)
-fetch('airports.json')
-  .then(response => response.json())
-  .then(data => {
-      airportsData = data;
-  });
+// Sample airport data directly in the JavaScript
+let airportsData = [
+    {
+        "code": "LAX",
+        "name": "Los Angeles International Airport",
+        "location": "Los Angeles, California, USA",
+        "description": "The primary international airport serving Los Angeles."
+    },
+    {
+        "code": "JFK",
+        "name": "John F. Kennedy International Airport",
+        "location": "New York City, New York, USA",
+        "description": "One of the busiest airports in the United States, located in Queens, NYC."
+    },
+    {
+        "code": "ORD",
+        "name": "O'Hare International Airport",
+        "location": "Chicago, Illinois, USA",
+        "description": "A major airport in Chicago, known for high passenger traffic."
+    }
+    // Add more airports as needed...
+];
 
 // Function to filter airports and update the table
 function filterAirports() {
