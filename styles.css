@@ -16,14 +16,16 @@ body {
     padding: 20px;
     border-radius: 8px;  /* Optional: rounded corners for the content */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional: soft shadow */
-    width: 80%;
+    width: 90%;  /* Make container width a percentage */
     max-width: 600px;  /* Restrict the max width */
+    text-align: center;  /* Center content inside container */
 }
 
 /* Style for the search input */
 input {
     padding: 10px;
-    width: 100%;
+    width: 80%;  /* Set the width to 80% for better sizing */
+    max-width: 400px;  /* Prevent the input from becoming too large */
     margin-bottom: 20px;
     font-size: 16px;
     border: 1px solid #ccc;  /* Light grey border */
