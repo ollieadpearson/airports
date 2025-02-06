@@ -1,31 +1,50 @@
+/* Apply Rubik font to the entire page */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    max-width: 800px;
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
     display: flex;
-    align-items: center;
     justify-content: center;
-    
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;  /* Light grey background */
 }
 
+/* Wrapper for the content */
+.container {
+    background-color: white;  /* White background for the content area */
+    padding: 20px;
+    border-radius: 8px;  /* Optional: rounded corners for the content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional: soft shadow */
+    width: 80%;
+    max-width: 600px;  /* Restrict the max width */
+}
+
+/* Style for the search input */
 input {
     padding: 10px;
-    width: 300px;
+    width: 100%;
     margin-bottom: 20px;
     font-size: 16px;
+    border: 1px solid #ccc;  /* Light grey border */
+    border-radius: 4px;  /* Rounded corners for the input */
 }
 
+/* Style for the table */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
 }
 
 table, th, td {
-    border: 1px solid #aaa;
+    border: 1px solid #ddd;  /* Light grey border */
 }
 
 th, td {
     padding: 10px;
     text-align: left;
+}
+
+th {
+    background-color: #f7f7f7;  /* Light grey background for the header */
 }
