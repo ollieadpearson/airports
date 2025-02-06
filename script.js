@@ -21,6 +21,12 @@ let airportsData = [
     // Add more airports as needed...
 ];
 
+// Function to clear the search input
+function clearSearch() {
+    document.getElementById("search").value = "";  // Clear the input field
+    filterAirports();  // Re-run the filter function to reset the results
+}
+
 // Function to filter airports and update the table
 function filterAirports() {
     let input = document.getElementById("search").value.toLowerCase();
