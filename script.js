@@ -1,22 +1,22 @@
 // Sample airport data directly in the JavaScript
 let airportsData = [
     {
-        "code": "LAX",
-        "name": "Los Angeles International Airport",
-        "location": "Los Angeles, California, USA",
-        "description": "The primary international airport serving Los Angeles."
+        "code": "ABZ",
+        "name": "Aberdeen Airport",
+        "location": "Aberdeen Airport (ABZ)",
+        "description": "Vaping is permitted within the dedicated smoking area which is adjacent to the main departure lounge near gate 5. There is a charge of £1 to access the shelter, with funds supporting the facility’s upkeep."
     },
     {
-        "code": "JFK",
-        "name": "John F. Kennedy International Airport",
-        "location": "New York City, New York, USA",
-        "description": "One of the busiest airports in the United States, located in Queens, NYC."
+        "code": "BHD",
+        "name": "Belfast Airport (BHD)",
+        "location": "Belfast Airport",
+        "description": "	Vaping is permitted in the airside smoking facility, situated after security beside the Lagan Bar. There is a charge of £1 to access the facility."
     },
     {
-        "code": "ORD",
-        "name": "O'Hare International Airport",
-        "location": "Chicago, Illinois, USA",
-        "description": "A major airport in Chicago, known for high passenger traffic."
+        "code": "BHX",
+        "name": "Birmingham Airport (BHX)",
+        "location": "Birmingham Airport",
+        "description": "Birmingham Airport vape rules allow the use of e-cigarettes within designated smoking areas outside of the front of the terminal. Once you have checked in, you will not be allowed to vape until you reach your destination."
     }
     // Add more airports as needed...
 ];
