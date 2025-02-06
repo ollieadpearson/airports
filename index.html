@@ -12,7 +12,10 @@
 
     <!-- Wrapper container -->
     <div class="container">
-        <input type="text" id="search" placeholder="Search by airport code or name..." onkeyup="filterAirports()">
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search by airport code or name..." onkeyup="filterAirports()">
+            <button class="clear-btn" id="clear-btn" onclick="clearSearch()">&#x2715;</button>  <!-- X Button -->
+        </div>
         <table id="resultsTable">
             <thead id="tableHeader" hidden>
                 <tr>
