@@ -10,7 +10,7 @@ let airportsData = [
         "code": "BHD",
         "name": "Belfast Airport (BHD)",
         "location": "Belfast Airport",
-        "description": "	Vaping is permitted in the airside smoking facility, situated after security beside the Lagan Bar. There is a charge of £1 to access the facility."
+        "description": "Vaping is permitted in the airside smoking facility, situated after security beside the Lagan Bar. There is a charge of £1 to access the facility."
     },
     {
         "code": "BHX",
@@ -24,11 +24,15 @@ let airportsData = [
 // Function to filter airports and update the table
 function filterAirports() {
     let input = document.getElementById("search").value.toLowerCase();
-    
-    // If the input is empty, clear the table and return
+    let tableHeader = document.getElementById("tableHeader");
+
+    // Show or hide the table header based on the input
     if (input === "") {
-        document.getElementById("resultsTable").getElementsByTagName('tbody')[0].innerHTML = "";
+        tableHeader.hidden = true; // Hide the header if input is empty
+        document.getElementById("resultsTable").getElementsByTagName('tbody')[0].innerHTML = ""; // Clear the table when input is empty
         return;
+    } else {
+        tableHeader.hidden = false; // Show header when typing
     }
 
     // Filter the airports based on the search input
@@ -57,4 +61,3 @@ function filterAirports() {
         });
     }
 }
-
